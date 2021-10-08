@@ -5,12 +5,12 @@ function adicionarFilme() {
       posterFilme.push(filmeFavotiro)
       nomeFilme.push(nomeFilmeFavorito)
     
-      var posterTela = document.getElementById("listaFilmes")
+      var posterTela = document.getElementById("movie-list")
         
       posterTela.innerHTML = ""
         
       for (var i = 0; i < posterFilme.length; i++) {
-        posterTela.innerHTML += "<figure><figcaption>" + nomeFilme[i] + "</figcaption> <img src=" + posterFilme[i] + "></figure>"
+        posterTela.innerHTML += "<div><p class='nome-poster'>" + nomeFilme[i] + "</p> <img src=" + posterFilme[i] + "></div>"
        
       }
     } else {
@@ -30,12 +30,12 @@ function retirarFilme() {
     nomeFilme.splice(indice, 1)
     posterFilme.splice(indice, 1)
 
-    var posterTela = document.getElementById("listaFilmes")
+    var posterTela = document.getElementById("movie-list")
 
     posterTela.innerHTML = ""
         
     for (var i = 0; i < posterFilme.length; i++) {
-      posterTela.innerHTML += "<figure><figcaption>" + nomeFilme[i] + "</figcaption> <img src=" + posterFilme[i] + "></figure>"
+      posterTela.innerHTML = "<div><p>" + nomeFilme[i] + "</p> <img src=" + posterFilme[i] + "></div>"
     }
 
     document.getElementById("nome").value = ""
