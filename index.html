@@ -19,14 +19,18 @@
         </p>
         <p>Para remover um filme da lista insira o nome e cliqe no botão "Retirar Filme"</p>
         <div class="form-wrapper">
+          <label for="name">Nome do filme</label>
             <input type="text" id="name" name="name" placeholder="Insira o nome do Filme">
             <div id="name-alert" class="alert"></div>
         </div>
         <div class="form-wrapper">
+          <label for="movie">Poster do filme</label>
           <input type="text" id="movie" name="movie" placeholder="Insira a URL da imagem">
           <div id="movie-alert" class="alert"></div>
+        </div>
+        <div id="form-btn">
           <button onClick="adicionarFilme()">Adicionar Filme</button>
-          <button id="btnretirar" onClick="retirarFilme()">Retirar Filme</button>
+          <button onClick="retirarFilme()">Retirar Filme</button>
         </div>
           <div class="list">
             <div id="movie-list"></div>

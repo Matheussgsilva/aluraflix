@@ -70,16 +70,20 @@ figure {
 }
 
 .form-wrapper {
-    margin: 0 0 15px;
+    max-width: 350px;
+    margin: auto;
+    text-align: left;
 }
-  
+
 .form-wrapper input {
     display: block;
-    margin: 0 auto;
-    padding: 10px 15px;
+    margin: 0px auto 10px;
+    padding: 10px 0px;
+    width: 100%;
 }
   
-.form-wrapper button {
+#form-btn button {
+    width: 170px;
     border: 0;
     color: #ffffff;
     background: #da1e26;
@@ -87,12 +91,18 @@ figure {
     padding: 15px 20px;
     font-size: 16px;
     border-radius: 4px;
-    margin-top: 20px;
+    margin: 10px 5px;
     cursor: pointer;
     transition: 0.3s;
 }
   
-.form-wrapper button:hover {
+#form-btn button:hover {
     opacity: 0.8;
+}
+
+#form-btn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
    
