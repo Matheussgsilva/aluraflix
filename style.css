@@ -82,7 +82,7 @@ figure {
     width: 100%;
 }
   
-#form-btn button {
+.form-btn button {
     width: 170px;
     border: 0;
     color: #ffffff;
@@ -96,11 +96,11 @@ figure {
     transition: 0.3s;
 }
   
-#form-btn button:hover {
+.form-btn button:hover {
     opacity: 0.8;
 }
 
-#form-btn {
+.form-btn {
     margin: auto;
     display: flex;
     justify-content: center;
