@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathflix</title>
+    <link rel="shortcut icon" href="images/mathflix.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,14 +17,16 @@
         <p class="page-subtitle">
           Adicione o seu filme:
         </p>
-        <p>Para remover um filme da lista adicione o nome e cliqe no botão "Retirar Filme"</p>
+        <p>Para remover um filme da lista insira o nome e cliqe no botão "Retirar Filme"</p>
         <div class="form-wrapper">
-            <input type="text" id="nome" name="nome" placeholder="Insira o nome do Filme">
+            <input type="text" id="name" name="name" placeholder="Insira o nome do Filme">
+            <div id="name-alert" class="alert"></div>
         </div>
         <div class="form-wrapper">
-          <input type="text" id="filme" name="filme" placeholder="Insira a URL da imagem">
+          <input type="text" id="movie" name="movie" placeholder="Insira a URL da imagem">
+          <div id="movie-alert" class="alert"></div>
           <button onClick="adicionarFilme()">Adicionar Filme</button>
-          <button onClick="retirarFilme()">Retirar Filme</button>
+          <button id="btnretirar" onClick="retirarFilme()">Retirar Filme</button>
         </div>
           <div class="list">
             <div id="movie-list"></div>
