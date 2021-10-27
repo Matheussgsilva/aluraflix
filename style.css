@@ -76,9 +76,10 @@ figure {
 }
 
 .form-wrapper input {
+    box-sizing: border-box;
     display: block;
     margin: 0px auto 10px;
-    padding: 10px 0px;
+    padding: 10px 5px;
     width: 100%;
 }
   
