@@ -1,24 +1,24 @@
-function adicionarFilme() {
-    var filmeFavotiro = document.getElementById("movie").value
-    var nomeFilmeFavorito = document.getElementById("name").value
+function addMovie() {
+    var favoriteMovie = document.getElementById("movie").value
+    var favoriteMovieName = document.getElementById("name").value
     var nameAlert = document.getElementById("name-alert")
     var movieAlert = document.getElementById("movie-alert")
 
-    if (filmeFavotiro.endsWith(".jpg")) {
-      if (nomeFilmeFavorito == "") {
+    if (favoriteMovie.endsWith(".jpg")) {
+      if (favoriteMovieName == "") {
           nameAlert.innerHTML += "<p>Insira o nome do Filme</p>"
         } else {
-      posterFilme.push(filmeFavotiro)
-      nomeFilme.push(nomeFilmeFavorito)
+      moviePoster.push(favoriteMovie)
+      movieName.push(favoriteMovieName)
     
-      var posterTela = document.getElementById("movie-list")
+      var screenPoster = document.getElementById("movie-list")
         
-      posterTela.innerHTML = ""
+      screenPoster.innerHTML = ""
       movieAlert.innerHTML = ""
       nameAlert.innerHTML = ""
         
-      for (var i = 0; i < posterFilme.length; i++) {
-        posterTela.innerHTML += "<div><p class='nome-poster'>" + nomeFilme[i] + "</p> <img src=" + posterFilme[i] + "></div>"
+      for (var i = 0; i < moviePoster.length; i++) {
+        screenPoster.innerHTML += "<div><p class='nome-poster'>" + movieName[i] + "</p> <img src=" + moviePoster[i] + "></div>"
       }
       }
     } else {
@@ -28,26 +28,26 @@ function adicionarFilme() {
     document.getElementById("name").value = ""
   }
 
-var posterFilme = []
-var nomeFilme = []
+var moviePoster = []
+var movieName = []
 
-function retirarFilme() {
-    var nomeFilmeFavorito = document.getElementById("name").value
+function deleteMovie() {
+    var favoriteMovieName = document.getElementById("name").value
     var nameAlert = document.getElementById("name-alert")
     
-    if (nomeFilmeFavorito == "" || nomeFilme.indexOf(nomeFilmeFavorito) == -1){
+    if (favoriteMovieName == "" || movieName.indexOf(favoriteMovieName) == -1){
       nameAlert.innerHTML = "<p>Insira o nome do filme que deseja retirar</p>"
     } else {
-      var indice = nomeFilme.indexOf(nomeFilmeFavorito)
-      nomeFilme.splice(indice, 1)
-      posterFilme.splice(indice, 1)
+      var movieIndex = movieName.indexOf(favoriteMovieName)
+      movieName.splice(movieIndex, 1)
+      moviePoster.splice(movieIndex, 1)
 
-      var posterTela = document.getElementById("movie-list")
+      var screenPoster = document.getElementById("movie-list")
 
-      posterTela.innerHTML = ""
+      screenPoster.innerHTML = ""
 
-      for (var i = 0; i < posterFilme.length; i++) {
-        posterTela.innerHTML += "<div><p>" + nomeFilme[i] + "</p> <img src=" + posterFilme[i] + "></div>"
+      for (var i = 0; i < moviePoster.length; i++) {
+        screenPoster.innerHTML += "<div><p>" + movieName[i] + "</p> <img src=" + moviePoster[i] + "></div>"
     }
       nameAlert.innerHTML = ""
     }
